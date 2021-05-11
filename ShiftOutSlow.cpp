@@ -23,7 +23,7 @@ ShiftOutSlow::ShiftOutSlow(const uint8_t dataPin, const uint8_t clockPin, const 
 }
 
 
-int ShiftOutSlow::write(const uint8_t data)
+size_t ShiftOutSlow::write(const uint8_t data)
 {
   for (uint8_t i = 0; i < 8; ++i)
   {
