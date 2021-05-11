@@ -27,7 +27,7 @@ int ShiftOutSlow::write(const uint8_t data)
 {
   for (uint8_t i = 0; i < 8; ++i)
   {
-    if (delayMicros > 0) delayMicroseconds(delayMicros/2);
+    if (_delay > 0) delayMicroseconds(_delay/2);
     if (bitOrder == LSBFIRST) {
       digitalWrite(_dataPin, val & 0x01);
       val >>= 1;
@@ -35,9 +35,8 @@ int ShiftOutSlow::write(const uint8_t data)
       digitalWrite(_dataPin, (val & 0x80) != 0);
       val <<= 1;
     }
-
     digitalWrite(_clockPin, HIGH);
-    if (delayMicros > 0) delayMicroseconds(delayMicros/2);
+    if (_delay > 0) delayMicroseconds(_delay/2);
     yield();
     digitalWrite(_clockPin, LOW);
   }
