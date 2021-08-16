@@ -44,7 +44,7 @@ void setup()
   {
     SOS.setDelay(d);
     uint32_t start = micros();
-    x = SOS.write(str, 12);
+    x = SOS.write((const uint8_t*) str, 12);
     uint32_t stop = micros();
     float duration = stop - start;
     Serial.print(d);
