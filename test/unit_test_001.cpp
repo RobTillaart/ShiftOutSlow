@@ -105,15 +105,15 @@ unittest(test_print_interface)
 
   fprintf(stderr, "VERSION:\t%s\n", SHIFTOUTSLOW_LIB_VERSION);
   int x = SOS.print("hello world");
-  assertEqual(x, 11);
+  assertEqual(11, x);
 
   int y = SOS.println("hello world");
-  assertEqual(y, 12);
+  assertEqual(13, y);
 
   char str[20] = "hello world";
   // casting needed for CI environment.
   int z = SOS.write((const uint8_t*) str, 8);
-  assertEqual(z, 8);
+  assertEqual(8, z);
 }
 
 unittest_main()
