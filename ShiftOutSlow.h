@@ -18,7 +18,7 @@
 class ShiftOutSlow : public Print
 {
 public:
-  // bitorder = { LSBFIRST, MSBFIRST };
+  // bitOrder = { LSBFIRST, MSBFIRST };
   ShiftOutSlow(const uint8_t dataPin, const uint8_t clockPin, const uint8_t  bitOrder = LSBFIRST);
 
   // PRINT INTERFACE
@@ -36,11 +36,13 @@ public:
 
 
 private:
-  uint8_t  _clockPin = 0  ;
+  uint8_t  _clockPin = 0;
   uint8_t  _dataPin  = 0;
   uint8_t  _bitOrder = LSBFIRST;
   uint16_t _delay    = 0;
   uint8_t  _value    = 0;
 };
 
+
 // -- END OF FILE --
+

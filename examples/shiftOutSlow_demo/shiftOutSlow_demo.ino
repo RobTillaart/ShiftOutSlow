@@ -14,6 +14,7 @@ ShiftOutSlow SOS(12, 13, LSBFIRST);
 
 volatile int x = 0;
 
+
 void setup()
 {
   Serial.begin(115200);
@@ -35,8 +36,11 @@ void setup()
   Serial.println("done...");
 }
 
+
 void loop()
 {
 }
 
+
 // -- END OF FILE --
+
