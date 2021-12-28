@@ -1,10 +1,8 @@
 //
 //    FILE: shiftOutSlow_print.ino
 //  AUTHOR: Rob Tillaart
-// VERSION: 0.1.0
 // PURPOSE: test sketch for print interface
 //     URL: https://github.com/RobTillaart/ShiftOutSlow
-//
 
 
 #include "ShiftOutSlow.h"

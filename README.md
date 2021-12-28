@@ -75,5 +75,5 @@ See examples.
 - adaptive speed example?
 - get set dutyCycle(0 .. 99%)
 - optimize the place to yield() ?
-- 
+- create releaseNotes.md
 
